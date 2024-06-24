@@ -1,13 +1,25 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Jost, sans-serif";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --secondary: #0896A7;
+  --primary: #EBF6F8;
+}
+
+.navbar {
+  background-color: var(--secondary);
+}
+
+.navbar img {
+  width: 90px;
+}
+
+.Meeting {
+  background-image: url(../src/Assets/Images/world-map.12619baddc975bdc81ce.png);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
 }
