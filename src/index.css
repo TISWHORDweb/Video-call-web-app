@@ -18,7 +18,7 @@
 }
 
 .Meeting {
-  background-image: url('Assets/Images/world-map.12619baddc975bdc81ce.png');
+  background-image: url(./Assets/Images/world-map.12619baddc975bdc81ce.png);
   height: 100vh;
   background-position: center;
   background-size: cover;
