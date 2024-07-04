@@ -7,9 +7,22 @@ function Meeting() {
     const [link, setLink] = useState()
     const [scroll, setScroll] = useState(false)
 
-    const Meeting = (e)=>{
+    const allowedChars = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+    function generateRandomString(length) {
+        let randomString = "";
+        for (let i = 0; i < length; i++) {
+            randomString += allowedChars.charAt(Math.floor(Math.random() * allowedChars.length));
+        }
+        return randomString;
+    }
+
+    const Meeting = (e) => {
         setScroll(true)
-        CreateMeeting(e)
+        const meetingID = generateRandomString(15)
+        if (meetingID) {
+            window.location.href = `https://13.246.5.190/${meetingID}`
+        }
     }
 
     return (
