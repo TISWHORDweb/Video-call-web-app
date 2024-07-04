@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from '../../Components/Nav'
 import Img from '../../Assets/Images/Group-6631.svg'
-import { CreateMeeting, CheckMeetingLink } from '../../Service/meeting.service'
 
 function Meeting() {
     const [link, setLink] = useState()
@@ -25,6 +24,12 @@ function Meeting() {
         }
     }
 
+    useEffect(() => {
+        if (link) {
+            window.location.href = link
+        }
+    }, [link])
+
     return (
         <div>
             <div className="Meeting">
@@ -42,7 +47,7 @@ function Meeting() {
                                 <div className="join">
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" onChange={(e) => setLink(e.target.value)} placeholder="https//:xolani-health.ewrutewyruiriuturriwrturw" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                                        <button class="btn btn-success" type="button" id="button-addon2" onClick={() => CheckMeetingLink(link)}>Join Meeting</button>
+                                        <button class="btn btn-success" type="button" id="button-addon2" >Join Meeting</button>
                                     </div>
                                 </div>
                                 <div className="create">
@@ -63,6 +68,7 @@ function Meeting() {
             </div>
         </div>
     )
+
 }
 
 export default Meeting
