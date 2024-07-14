@@ -1,5 +1,5 @@
-import { BrowserRouter } from 'react-router-dom';
-import { Routes } from './Config/routes';
+// import { BrowserRouter } from 'react-router-dom';
+// import { Routes } from './Config/routes';
 import React, { useState } from 'react';
 import { JitsiMeeting } from '@jitsi/react-sdk';
 
@@ -12,9 +12,9 @@ function App() {
     setMeetingId(newMeetingId);
   };
 
-  const handleJoinMeeting = (id) => {
-    setMeetingId(id);
-  };
+  // const handleJoinMeeting = (id) => {
+  //   setMeetingId(id);
+  // };
 
   const jwtToken = null;
 
